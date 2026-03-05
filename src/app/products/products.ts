@@ -21,11 +21,7 @@ export class Products {
     private route: ActivatedRoute,
     private cartService: CartService
   ) {}
-   addToCart(product: any) { 
-    console.log("Adding to cart:", product);
-    this.cartService.addToCart(product);
-    alert(`${product.name} added to cart!`);
-  }
+
 
   ngOnInit() {
     this.filteredProducts$ = this.route.paramMap.pipe(
@@ -36,6 +32,29 @@ export class Products {
         );
       })
     );
+  }
+  //    addToCart(product: any) { 
+  //   console.log("Adding to cart:", product);
+  //   this.cartService.addToCart(product);
+  //   // alert(`${product.name} added to cart!`);
+  // }
+
+    addToCart(product: any) {
+    this.cartService.addToCart(product);
+  }
+  
+  getQty(product: any) {
+    return this.cartService.getQuantity(product.id);
+  }
+
+ 
+  increase(product: any) {
+    this.cartService.increaseQty(product);
+  }
+
+ 
+  decrease(product: any) {
+    this.cartService.decreaseQty(product);
   }
  
 }

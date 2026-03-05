@@ -1,0 +1,9 @@
+.badge {
+  font-size: 10px;
+  padding: 4px 6px;
+  position: absolute;
+  top: 9px;
+  right: 110px;
+  background-color: red;
+color: white;
+}
