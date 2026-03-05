@@ -1,9 +1,27 @@
-footer {
+/* footer {
 	width: 100%;
+	position: absolute;
+	margin-bottom: 0px;
 	z-index: 100;
 }
 .fixed-footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
+} */
+ 
+.main{
+    height: 100vh;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.flex-shrink-0{
+    flex-shrink: 0;
 }

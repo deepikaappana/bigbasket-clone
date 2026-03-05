@@ -27,27 +27,44 @@ export class Cart implements OnInit {
   }
 
  
-  increaseQty(item: any) {
-    item.quantity++;
+  // increaseQty(item: any) {
+  //   item.quantity++;
+  //   this.calculateSummary();
+  // }
+
+    increaseQty(item: any) {
+    this.cartService.increaseQty(item);
+  }
+
+
+  // decreaseQty(item: any) {
+  //   if (item.quantity > 1) {
+  //     item.quantity--;
+  //   } else {
+  //     this.removeItem(item);
+  //   }
+  //   this.calculateSummary();
+  // }
+
+    decreaseQty(item: any) {
+    this.cartService.decreaseQty(item);   
+    this.cartItems = this.cartService.getCartItems();
     this.calculateSummary();
   }
 
 
-  decreaseQty(item: any) {
-    if (item.quantity > 1) {
-      item.quantity--;
-    } else {
-      this.removeItem(item);
-    }
-    this.calculateSummary();
-  }
 
+  // removeItem(item: any) {
+  //   this.cartItems = this.cartItems.filter(
+  //     (i) => i.id !== item.id
+  //   );
+  //   this.cartService.setCartItems(this.cartItems);
+  //   this.calculateSummary();
+  // }
 
-  removeItem(item: any) {
-    this.cartItems = this.cartItems.filter(
-      (i) => i.id !== item.id
-    );
-    this.cartService.setCartItems(this.cartItems);
+    removeItem(item: any) {
+    this.cartService.removeItem(item.id); 
+    this.cartItems = this.cartService.getCartItems();
     this.calculateSummary();
   }
 

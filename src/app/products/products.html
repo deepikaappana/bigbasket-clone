@@ -1,53 +1,49 @@
 <div class="container mt-4">
   <ng-container *ngIf="filteredProducts$ | async as filteredProducts">
     <div class="row">
-
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4"
-           *ngFor="let product of filteredProducts">
-
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let product of filteredProducts">
         <div class="product-card">
-
-          
           <span class="discount-badge">50% OFF</span>
 
-          
           <div class="image-wrapper">
-            <img [src]="product.image" alt="{{product.name}}">
+            <img [src]="product.image" alt="{{ product.name }}" />
           </div>
 
-          
           <span class="time-badge">⏱ 10 MINS</span>
 
-          
           <p class="brand">fresh!</p>
 
-          
           <h6 class="product-title">{{ product.name }}</h6>
 
-          
           <select class="form-select quantity-dropdown">
             <option>100 kg</option>
-
           </select>
 
-          
           <div class="price-section">
             <span class="current-price">₹{{ product.price }}</span>
             <span class="old-price">₹150</span>
           </div>
 
+          <!-- <button class="add-btn" (click)="addToCart(product)">Add</button> -->
+
+          <div class="cart-btn">
+            <button *ngIf="getQty(product) === 0" class="add-btn" (click)="addToCart(product)">
+              Add
+            </button>
+
+            <div *ngIf="getQty(product) > 0" class="qty-box">
+              <button class="add-btns"  (click)="decrease(product)">-</button>
+
+              <span>{{ getQty(product) }}</span>
+
+              <button class="add-btns" (click)="increase(product)">+</button>
+            </div>
+          </div>
           
-          <button class="add-btn" (click)="addToCart(product)">Add</button>
-        
-
         </div>
-
       </div>
-
     </div>
 
-    <div *ngIf="filteredProducts.length === 0" class="text-center">
-      No products found.
-    </div>
+    <div *ngIf="filteredProducts.length === 0" class="text-center">No products found.</div>
   </ng-container>
 </div>
