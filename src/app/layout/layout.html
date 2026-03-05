@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold text-success" routerLink="/home">
+      bigbasket
+    </a>
+
+    <div class="collapse navbar-collapse">
+
+      <ul class="navbar-nav me-auto ms-4">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Shop</a>
+        </li>
+      </ul>
+
+      <button class="btn btn-outline-success me-2" routerLink="/login">
+        Login
+      </button>
+
+      <button class="btn btn-success" routerLink="/cart">
+        Cart
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4 ">  
+  <router-outlet></router-outlet>
+</div>
+<footer class="bg-dark text-white w-full text-md py-5">
+  <div class="container flex">
+    <div class="row">
+      <div class="col-md-4 ">
+        <h4>Bigbasket</h4>
+        <ul class="list-unstyled">
+          <li>About Us</li>
+          <li>In News</li>
+          <li>bb Instant</li>
+          <li>bb daily</li>
+          <li>About Us</li>
+          <li>In News</li>
+        </ul>
+
+      </div>
+      <div class="col-4">
+         <h4>Help</h4>
+        <ul class="list-unstyled">
+          <li>FAQs</li>
+          <li>Contact Us</li>
+          <li>bb Wallet FAQs</li>
+          <li>bb Wallet FAQs</li>
+        </ul>
+      </div>
+         <div class="col-4">
+         <h4>Help</h4>
+        <ul class="list-unstyled">
+          <li>FAQs</li>
+          <li>Contact Us</li>
+          <li>bb Wallet FAQs</li>
+          <li>bb Wallet FAQs</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</footer>

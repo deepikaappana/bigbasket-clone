@@ -1,0 +1,68 @@
+<div class="container mt-4">
+
+  <h3 class="mb-4">My Cart</h3>
+
+  <div *ngIf="cartItems.length === 0">
+    <p>Your cart is empty 🛒</p>
+  </div>
+
+  <div *ngFor="let item of cartItems" class="cart-card">
+
+    <img [src]="item.image" alt="product" class="product-img">
+
+    <div class="details">
+      <h6>{{ item.name }}</h6>
+      <p>₹{{ item.price }}</p>
+
+      <div class="qty-box">
+        <button (click)="decreaseQty(item)">−</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increaseQty(item)">+</button>
+      </div>
+    </div>
+
+    <button class="remove-btn" (click)="removeItem(item)">
+      Remove
+    </button>
+
+  </div>
+
+  
+  <div *ngIf="cartItems.length > 0" class=" col-4  text-center payment-summary mt-4">
+
+    <h5>Payment Summary</h5>
+
+    <div class="row">
+      <span>Sub Total</span>
+      <span>₹{{ subtotal }}</span>
+    </div>
+
+    <div class="row text-success">
+      <span>Discount</span>
+      <span>- ₹{{ discount }}</span>
+    </div>
+
+    <div class="row">
+      <span>Tax (5%)</span>
+      <span>₹{{ tax }}</span>
+    </div>
+
+    <div class="row">
+      <span>Shipping</span>
+      <span>₹{{ shipping }}</span>
+    </div>
+
+    <hr>
+
+    <div class="row total">
+      <span>Total</span>
+      <span>₹{{ total }}</span>
+    </div>
+
+    <button class="checkout-btn">
+      Proceed to Checkout
+    </button>
+
+  </div>
+
+</div>

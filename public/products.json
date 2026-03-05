@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Banana",
+    "price": 120,
+    "category": "fruits",
+    "image": "https://www.bbassets.com/media/uploads/p/l/10000033_26-fresho-banana-yelakki.jpg"
+  },
+   {
+    "id": 2,
+    "name": "Grapes",
+    "price": 150,
+    "category": "fruits",
+    "image": "https://www.bbassets.com/media/uploads/p/l/40218332_8-fresho-grapes-green.jpg"
+  },
+   {
+    "id": 1,
+    "name": "Apple",
+    "price": 120,
+    "category": "fruits",
+    "image": "https://www.bbassets.com/media/uploads/p/l/40033819_35-fresho-apple-shimla.jpg"
+  },
+   {
+    "id": 3,
+    "name": "Pomegranate",
+    "price": 120,
+    "category": "fruits",
+    "image": "https://www.bbassets.com/media/uploads/p/l/40120006_11-fresho-pomegranate-small.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Carrot",
+    "price": 40,
+    "category": "vegetables",
+    "image": "https://www.bbassets.com/media/uploads/p/m/10000070_17-fresho-carrot-orange.jpg?tr=w-154,q-80"
+  },
+  {
+    "id": 5,
+    "name": "beetroot",
+    "price": 40,
+    "category": "vegetables",
+    "image": "https://www.bbassets.com/media/uploads/p/l/10000045_20-fresho-beetroot.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Cauliflower",
+    "price": 40,
+    "category": "vegetables",
+    "image": "https://www.bbassets.com/media/uploads/p/l/10000074_21-fresho-cauliflower.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Capsicum",
+    "price": 40,
+    "category": "vegetables",
+    "image": "https://www.bbassets.com/media/uploads/p/l/10000067_27-fresho-capsicum-green.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Coca Cola",
+    "price": 50,
+    "category": "beverages",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 9,
+    "name": "Chips",
+    "price": 30,
+    "category": "snacks",
+    "image": "https://via.placeholder.com/150"
+  }
+]
